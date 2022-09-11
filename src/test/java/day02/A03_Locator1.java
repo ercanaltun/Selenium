@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class A03_Locator {
+import java.util.List;
+
+public class A03_Locator1 {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -30,6 +32,14 @@ public class A03_Locator {
         // WebElement kelime=driver.findElement(By.className("nav-input nav-progressive-attribute"));
         //kelime.sendKeys("17,3"+Keys.ENTER);
         //çalışmadı çünkü class isminden 2 tane vardı.Yani uniqeu değildi
+
+        //tag i input olanın sayısını bulun
+        List<WebElement> tag=driver.findElements(By.tagName("input"));
+        System.out.println("input tag sayısı . "+tag.size());//190
+
+        // sayfayı kapat
+        driver.close();
+
 
 
     }
