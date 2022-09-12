@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class A05_Locator3 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver","src/recources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -27,9 +27,9 @@ public class A05_Locator3 {
         kelime.sendKeys(" Insprion"+Keys.ENTER);
 
         //Xpath ile
-        System.out.println(driver.findElement(By.xpath("(//*[@class='nav-input nav-progressive-attribute'])[2]")));
+        driver.findElement(By.xpath("(//*[@class='nav-input nav-progressive-attribute'])[2]")).click();
+        Thread.sleep(6000);
 
 
-        driver.close();
     }
 }
