@@ -30,5 +30,6 @@ public class A05_Locator3 {
         System.out.println(driver.findElement(By.xpath("(//*[@class='nav-input nav-progressive-attribute'])[2]")));
 
 
+        driver.close();
     }
 }
